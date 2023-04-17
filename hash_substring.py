@@ -12,11 +12,17 @@ def read_file_input(file):
 
     return pattern, text
 
+
+def user_input():
+    pattern = input().rstrip()
+    text = input().rstrip()
+    return pattern, text
+
 def i_or_f():
     input_i_or_f = input().rstrip()
     
     if input_i_or_f == 'I':
-        return i_or_f()
+        return user_input()
     elif input_i_or_f == 'F':
         file = "06"
         if str(file[-1]) == "a":
