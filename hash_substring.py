@@ -4,11 +4,12 @@ def read_input():
         pattern = input().rstrip()
         text = input().rstrip()
     elif input_type == "F":
-        file_path = input().rstrip()
+        file_name = "06"
+        file_path = "./tests/" + file_name
         with open(file_path, "r") as f:
             pattern = f.readline().rstrip()
             text = f.readline().rstrip()
-    return (pattern.rstrip(), text.rstrip())
+    return pattern, text
 
 def print_occurrences(output):
     print(' '.join(map(str, output)))
