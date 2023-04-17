@@ -1,10 +1,14 @@
 def read_input():
-    input_type = input()
+    input_type = input().rstrip()
     if input_type == "I":
-        return input().rstrip(), input().rstrip()
+        pattern = input().rstrip()
+        text = input().rstrip()
     elif input_type == "F":
-        with open(input().rstrip(), "r") as f:
-            return f.readline().rstrip(), f.readline().rstrip()
+        file_path = input().rstrip()
+        with open(file_path, "r") as f:
+            pattern = f.readline().rstrip()
+            text = f.readline().rstrip()
+    return pattern, text
 
 def print_occurrences(output):
     print(' '.join(map(str, output)))
