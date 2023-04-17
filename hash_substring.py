@@ -8,7 +8,7 @@ def read_input():
         with open(file_path, "r") as f:
             pattern = f.readline().rstrip()
             text = f.readline().rstrip()
-    return pattern, text
+    return (pattern.rstrip(), text.rstrip())
 
 def print_occurrences(output):
     print(' '.join(map(str, output)))
